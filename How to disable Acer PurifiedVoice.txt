@@ -1,0 +1,80 @@
+FIX: WINDOWS SOUND GETS DISTORTED DURING ZOOM CALLS (Acer PurifiedVoice)
+========================================================================
+
+Symptoms:
+As soon as you join a Zoom meeting (or another video-call app), all other sound
+in Windows breaks: in music you only hear the highest frequencies, the sound
+stutters, gets quieter, and sounds muffled or "underwater". In games you hear
+almost nothing except explosions and gunshots. It happens on every output device:
+laptop speakers, wired, USB and Bluetooth headphones.
+
+Cause:
+Acer PurifiedVoice, Acer's AI noise reduction. It switches itself on when a
+video-call app starts, and it processes not only your microphone but also
+everything that goes to your speakers. It treats music and game sound as
+"noise" and cuts it out.
+
+
+STEP 1. Open Acer PurifiedVoice
+-------------------------------
+1. Press Start (the Win key).
+2. Type: PurifiedVoice
+3. Open "Acer PurifiedVoice Console".
+
+If search finds nothing, open Acer Quick Access or NitroSense and look for
+PurifiedVoice / AI Noise Reduction there.
+
+
+STEP 2. Turn off noise reduction
+--------------------------------
+In the PurifiedVoice window, switch OFF all noise reduction features:
+
+  - AI Noise Reduction;
+  - anything for speakers or incoming audio (Speaker, Playback, incoming
+    voices). This is the main cause;
+  - automatic activation for video-call apps, if there is such an option
+    (Auto-enable / Conference apps / Video conference mode).
+
+Option names may differ slightly between app versions.
+Simple rule: anything that says Noise Reduction — turn it off.
+
+
+STEP 3. Check
+-------------
+1. Keep Zoom running (any meeting will do) and play some music or a video.
+2. The sound should be normal again: bass is back, no stuttering,
+   no "underwater" effect.
+
+If it didn't help, restart Zoom (fully quit it from the tray icon and open it
+again) and check once more.
+
+
+STEP 4. Noise suppression for your own voice (optional)
+-------------------------------------------------------
+To keep background noise out of your microphone, use Zoom's own noise
+suppression. It only processes your microphone and does not touch Windows sound:
+
+  Zoom → Settings → Audio → Background noise suppression → Auto or High.
+
+
+IF THE DISTORTION COMES BACK
+----------------------------
+Acer updates (Acer Care Center, Windows Update, driver updates) sometimes turn
+PurifiedVoice back on. If the symptoms return, repeat steps 1–3.
+
+The radical option is to uninstall the app:
+  Start → Settings → Apps → Installed apps →
+  Acer PurifiedVoice Console → "..." → Uninstall.
+You can reinstall it later from the Microsoft Store or Acer's support site.
+
+
+WHAT WAS CHECKED AND IS NOT THE CAUSE
+-------------------------------------
+  - The microphone Zoom keeps open while muted: fully disabling it in Windows
+    did not help.
+  - Windows communications ducking (Control Panel → Sound → Communications →
+    "Do nothing"): did not help.
+  - Speaker "Audio enhancements" and DTS:X Ultra: did not help.
+
+Tested on: Acer Nitro ANV15-52, Windows 11, Zoom Workplace 6.7,
+Acer PurifiedVoice Console 2.0.14.
